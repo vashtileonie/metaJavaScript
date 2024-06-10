@@ -37,6 +37,10 @@ function listNFTs () {
       console.log("Theme: " + arrayNFT[i].theme);
       console.log("Layers of the Cake: " + arrayNFT[i].layers);
    }
+   // Log message if no NFTs have been minted yet
+   if (arrayNFT.length === 0) {
+    console.log("No Cake NFTs have been minted yet.");
+ }
 }
 
 // print the total number of NFTs we have minted to the console
