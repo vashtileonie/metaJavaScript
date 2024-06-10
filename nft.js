@@ -24,23 +24,29 @@ function mintNFT (nameParam, cakeFlavorParam, themeParam, layersParam) {
    }
    //add items to the array
    arrayNFT.push(NFT);
-   console.log("Successfully Minted:" + nameParam);
+   console.log("Successfully Minted: " + nameParam);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
    for(let i=0; i < arrayNFT.length; i++){
-      console.log(arrayNFT[i]);
+    console.log("\nCakeID: " + (i+1));
+      console.log("Customer: " + arrayNFT[i].name);
+      console.log("Cake Flavor: " + arrayNFT[i].cakeFlavor);
+      console.log("Theme: " + arrayNFT[i].theme);
+      console.log("Layers of the Cake: " + arrayNFT[i].layers);
    }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-   console.log(arrayNFT.length);
+   console.log("\nTotal Entries: "+arrayNFT.length);
 }
 
 // call your functions below this line
 mintNFT ("Alice", "Chocolate", "Floral", "2");
+mintNFT ("Sienna", "Vanilla", "Princess", "4");
+mintNFT ("Nathan", "Mocha", "Roblox", "1");
 listNFTs();
 getTotalSupply();
